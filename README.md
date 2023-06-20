@@ -10,7 +10,6 @@ Este proyecto es un sistema de gestión de un garaje que permite realizar el cam
 - El sistema permite ingresar y retirar vehículos del garaje.
 - Proporciona información en tiempo real del número total de vehículos en el garaje.
 - Calcula el precio total del cambio de todas las ruedas de todos los vehículos presentes en el garaje.
-- Calcula el kilometraje medio de todos los vehículos.
 
 ## Estructura del proyecto
 
