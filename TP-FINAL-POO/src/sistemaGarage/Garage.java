@@ -32,7 +32,12 @@ public class Garage {
     }
 
     public void mostrarAtendidos() {
-        listaAtendidos.forEach(System.out::println);
+        double ganancia = 0.0;
+        for (int i = 0; i < listaAtendidos.size(); i++) {
+            System.out.println(listaAtendidos.get(i));
+            ganancia += precioCubierta*listaAtendidos.get(i).getRuedas();
+        }
+        System.out.println("Ganancia: " + ganancia);
     }
 
 }

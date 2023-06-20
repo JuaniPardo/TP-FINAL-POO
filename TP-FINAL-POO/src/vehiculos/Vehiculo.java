@@ -16,4 +16,8 @@ public class Vehiculo {
                 ", ruedas=" + ruedas +
                 '}';
     }
+
+    public int getRuedas() {
+        return ruedas;
+    }
 }
