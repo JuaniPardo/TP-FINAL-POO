@@ -1,12 +1,12 @@
 package sistemaGarage;
 
-import vehiculos.Coche;
-import vehiculos.Moto;
-import vehiculos.Vehiculo;
+import vehiculos.*;
 
 import java.util.ArrayList;
 
 public class GarageTest {
+
+    //Método para crear vehículos de forma aleatoria
     public static Vehiculo crearVehiculo(){
         String[] marcasCoche = {"Ford", "Chevrolet", "Peugeot", "Renault", "Toyota"};
         String[] marcasMoto = {"Honda", "Yamaha", "Suzuki", "Ducati", "Zanella"};
@@ -22,12 +22,51 @@ public class GarageTest {
         }
 
     }
+
+    //============ Método MAIN ============
     public static void main(String[] args) {
-        ArrayList<Vehiculo> listavehiculos = new ArrayList<>();
+
+        Vehiculo vTest;
+
+        /*ArrayList<Vehiculo> listavehiculos = new ArrayList<>();
         listavehiculos.add(crearVehiculo());
+        listavehiculos.forEach(System.out::println);*/
 
-        listavehiculos.forEach(System.out::println);
+        // CREO EL GARAGE CPS (Caravallo-Pardo-Sain)
+        Garage garageCPS = new Garage(5,500.0);
 
+
+        garageCPS.ingresarVehiculo(crearVehiculo());
+        garageCPS.ingresarVehiculo(crearVehiculo());
+        garageCPS.ingresarVehiculo(crearVehiculo());
+        garageCPS.ingresarVehiculo(crearVehiculo());
+        garageCPS.ingresarVehiculo(crearVehiculo());
+        garageCPS.ingresarVehiculo(crearVehiculo());
+        garageCPS.procesarVehiculo();
+        garageCPS.procesarVehiculo();
+        garageCPS.procesarVehiculo();
+        garageCPS.procesarVehiculo();
+        garageCPS.procesarVehiculo();
+        garageCPS.procesarVehiculo();
+
+        garageCPS.ingresarVehiculo(crearVehiculo());
+        garageCPS.ingresarVehiculo(crearVehiculo());
+        garageCPS.ingresarVehiculo(crearVehiculo());
+        garageCPS.ingresarVehiculo(crearVehiculo());
+        garageCPS.procesarVehiculo();
+        garageCPS.procesarVehiculo();
+        garageCPS.procesarVehiculo();
+        garageCPS.ingresarVehiculo(crearVehiculo());
+        garageCPS.ingresarVehiculo(crearVehiculo());
+        garageCPS.ingresarVehiculo(crearVehiculo());
+        garageCPS.procesarVehiculo();
+        garageCPS.procesarVehiculo();
+        garageCPS.procesarVehiculo();
+        garageCPS.procesarVehiculo();
+        System.out.println("--------------------------");
+        garageCPS.mostrarAtendidos();
+
+        //// TODO: 20/06/2023 AGREGAR Menú
     }
 
 }
