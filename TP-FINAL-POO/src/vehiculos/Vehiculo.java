@@ -1,23 +1,23 @@
 package vehiculos;
 
 public class Vehiculo {
-    private String marca;
-    private int ruedas;
+    private final String MARCA;
+    private final int RUEDAS;
 
     public Vehiculo(String marca, int ruedas) {
-        this.marca = marca;
-        this.ruedas = ruedas;
+        this.MARCA = marca;
+        this.RUEDAS = ruedas;
     }
 
     @Override
     public String toString() {
         return "Vehiculo{" +
-                "marca='" + marca + '\'' +
-                ", ruedas=" + ruedas +
+                "marca='" + MARCA + '\'' +
+                ", ruedas=" + RUEDAS +
                 '}';
     }
 
-    public int getRuedas() {
-        return ruedas;
+    public int getRUEDAS() {
+        return RUEDAS;
     }
 }
