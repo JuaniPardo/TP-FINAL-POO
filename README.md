@@ -2,6 +2,8 @@
 
 Este proyecto es un sistema de gestión de un garaje que permite realizar el cambio de ruedas tanto para coches como para motos. A continuación se detallan las principales funcionalidades del sistema.
 
+![UML del proyecto](https://github.com/JuaniPardo/TP-FINAL-POO/blob/main/TP-FINAL-POO/Garage.png)
+
 ## Especificaciones
 
 - El precio del cambio de una rueda se fija al abrir el garaje.
