@@ -2,7 +2,7 @@ package sistemaGarage;
 
 import vehiculos.*;
 
-import java.util.ArrayList;
+import java.util.Scanner;
 
 public class GarageTest {
 
@@ -23,20 +23,40 @@ public class GarageTest {
 
     }
 
+    // Método para mostrar el menú y leer la opción seleccionada
+    public static int mostrarMenu() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("MENU");
+        System.out.println("1. Ingresar un vehículo");
+        System.out.println("2. Procesar un vehículo");
+        System.out.println("3. Ver vehículos atendidos");
+        System.out.println("4. Salir");
+        System.out.print("Ingrese una opción: ");
+        return scanner.nextInt();
+    }
+
     //============ Método MAIN ============
     public static void main(String[] args) {
 
-        Vehiculo vTest;
-
-        /*ArrayList<Vehiculo> listavehiculos = new ArrayList<>();
-        listavehiculos.add(crearVehiculo());
-        listavehiculos.forEach(System.out::println);*/
 
         // CREO EL GARAGE CPS (Caravallo-Pardo-Sain)
         Garage garageCPS = new Garage(5,500.0);
 
-
-        garageCPS.ingresarVehiculo(crearVehiculo());
+        boolean salir = false;
+        while (!salir) {
+            int opcion = mostrarMenu();
+            switch (opcion) {
+                case 1 -> garageCPS.ingresarVehiculo(crearVehiculo());
+                case 2 -> garageCPS.procesarVehiculo();
+                case 3 -> {
+                    System.out.println("Vehículos atendidos:");
+                    garageCPS.mostrarAtendidos();
+                }
+                case 4 -> salir = true;
+                default -> System.out.println("Opción inválida. Intente nuevamente.");
+            }
+        }
+        /*garageCPS.ingresarVehiculo(crearVehiculo());
         garageCPS.ingresarVehiculo(crearVehiculo());
         garageCPS.ingresarVehiculo(crearVehiculo());
         garageCPS.ingresarVehiculo(crearVehiculo());
@@ -64,7 +84,7 @@ public class GarageTest {
         garageCPS.procesarVehiculo();
         garageCPS.procesarVehiculo();
         System.out.println("--------------------------");
-        garageCPS.mostrarAtendidos();
+        garageCPS.mostrarAtendidos();*/
 
         //// TODO: 20/06/2023 AGREGAR Menú
     }
